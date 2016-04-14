@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% load staticfiles %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% block css %}
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        {% endblock %}
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="cabecera">
+                {% block cabecera %}
+                <h1>Envio de xlsx y odt</h1>
+                <hr>
+                {% endblock %}
+            </div>
+            <div id = "cuerpo">
+                <div id="menu">
+                    {% block menu %}
+                    <h3>Menú</h3><hr>
+                    <a href="{% url 'envio:index'%}"><h3>Inicio</h3></a>
+                    <a href="{% url 'envio:upload_file'%}"><h3>Cargar</h3></a>
+                    {% endblock %}
+                </div>
+                <div id="contenido">
+                    {% block contenido %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div id="pie">
+                {% block pie %}
+                    <p>Rodrigo Boet. 2016</p>
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>

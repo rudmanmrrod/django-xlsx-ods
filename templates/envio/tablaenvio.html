@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block title%}
+    Tabla
+{%endblock%}
+
+{%block contenido%}
+    <h1>Tabla de Carga</h1>
+    <table border="2px">
+        
+        {% for key,val in my_dict.items %}
+            <tr>
+                <td><b>{{key}}</b></td>
+                {%for item in val%}
+                    <td>{{item}}</td>
+                {%endfor%}
+            </tr>
+        {% endfor %}
+        
+    </table>
+{%endblock%}
