@@ -5,13 +5,14 @@
         <title>{% block title %}{% endblock %}</title>
         {% block css %}
         <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
         {% endblock %}
     </head>
     <body>
         <div id="contenedor">
             <div id="cabecera">
                 {% block cabecera %}
-                <h1>Envio de xlsx y odt</h1>
+                <h1 style="text-align: center">Envio de xlsx y odt</h1>
                 <hr>
                 {% endblock %}
             </div>
@@ -19,8 +20,10 @@
                 <div id="menu">
                     {% block menu %}
                     <h3>Menú</h3><hr>
-                    <a href="{% url 'envio:index'%}"><h3>Inicio</h3></a>
-                    <a href="{% url 'envio:upload_file'%}"><h3>Cargar</h3></a>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="{% url 'envio:index'%}"><h3>Inicio</h3></a></li>
+                        <li><a href="{% url 'envio:upload_file'%}"><h3>Cargar</h3></a></li>
+                    </ul>
                     {% endblock %}
                 </div>
                 <div id="contenido">

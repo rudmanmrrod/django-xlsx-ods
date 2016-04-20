@@ -5,8 +5,8 @@
 
 {%block contenido%}
     <h1>Tabla de Carga</h1>
-    <table border="2px">
-        
+    <table class="table" >
+        <tbody>
         {% for key,val in my_dict.items %}
             <tr>
                 <td><b>{{key}}</b></td>
@@ -15,6 +15,6 @@
                 {%endfor%}
             </tr>
         {% endfor %}
-        
+        </tbody>
     </table>
 {%endblock%}
