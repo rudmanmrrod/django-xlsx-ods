@@ -13,7 +13,6 @@ Python2.7
 Django 1.9
 openpyxl
 odfpy
-django-bootstrap3
 ```
 
 #Uso
@@ -21,8 +20,6 @@ django-bootstrap3
 Instalar openpyxl -> pip install openpyxl
 
 Instalar odfpy -> https://github.com/eea/odfpy
-
-Instalar django-bootstrap3 -> pip install django-bootstrap3
 
 Correr el migrate en django
 
