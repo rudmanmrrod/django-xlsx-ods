@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
-{% load bootstrap3 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
 {%block title%}
     Envio
 {%endblock%}
 
 {%block contenido%}
-    <h1>Carga de Archivos</h1>
+    <h1>Carga de Archivos</h1><hr>
     <form action="{% url 'envio:upload_file' %}" method="post" enctype="multipart/form-data" role="form">
         {% csrf_token %}
-        {% bootstrap_form form %}
-        {% buttons submit='Enviar' %}{% endbuttons %}
+        <div class="container">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-2">
+						<label>{{ form.cargar.label }}</label>
+					</div>
+					<div class="col-md-10">
+						{{form.cargar}}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<button class="btn btn-primary">Enviar</button>
+			</div>
+        </div>
     </form>
     <p>{{error}}</p>  
 {%endblock%}
