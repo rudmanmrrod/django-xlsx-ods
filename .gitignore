@@ -1,5 +1,5 @@
 *.pyc
 *.py~
-media/files
+media/files/
 migrations/
 
